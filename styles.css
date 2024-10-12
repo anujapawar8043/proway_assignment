@@ -1,0 +1,268 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 350px;
+    background: #fff;
+    border: 1px solid #ddd;
+   padding: 20px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #FF6B82;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .head-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+  }
+  .hr-line{
+    border:1px solid #C8C8C8;
+    width: 25%;
+  }
+  
+  /* Unit Box Styles */
+  .unit-box {
+    border: 0.9px solid #ddd;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .unit-box.active{
+    border: 1px solid  #FF6B82;
+  }
+  
+  .unit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+  }
+
+  .unit-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:13px;
+  /* /  margin-left: 13px; */
+  }
+  .unit-radio{
+    margin:0px;
+  }
+  .unit-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .usd-price{
+    display: flex;
+    flex-direction: column;
+  }
+  .discount-tag {
+    background-color:#FF6B82;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+  
+  .price {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 12px;
+  }
+  
+  /* Most Popular Tag */
+  .most-popular::before {
+    content: "MOST POPULAR";
+    position: absolute;
+    top: -8px;
+    right: 5px;
+    background-color:#FF6B82;
+    color: white;
+    padding: 6px 11px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: 700;
+    line-height: 14px;
+   }
+  
+  /* Option Dropdowns */
+  .options {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .options.show {
+    display: grid;
+    width:70%;
+    grid-template-columns:  10% repeat(2,1fr);
+    gap:8px;
+    align-items: center;
+
+  }
+  
+  .dropdown {
+    margin-bottom: 10px;
+  }
+  
+  .dropdown label {
+    display: block;
+    font-size: 12px;
+  }
+  
+  .dropdown select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Footer Section */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .free-delivery {
+    color:#FF6B82;
+    font-weight: bold;
+  }
+  
+  .total {
+    font-weight: bold;
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background-color:  #FF6B82;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn span{
+    margin-right: 8px;
+  }
+  .add-to-cart-btn:hover {
+    background-color: hsl(346, 78%, 51%);
+  }
+  
+  /* Footer Credit */
+  .credit {
+    text-align: right;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  /* RESPONSIVENESS */
+  /* For smaller screens (mobile devices) */
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%; 
+    }
+  
+    .unit-header {
+      flex-wrap: wrap; 
+      text-align: left;
+    }
+
+    .discount-tag {
+      font-size: 14px; 
+    }
+  
+    .price {
+      font-size: 16px;
+    }
+  
+     .price, .original-price {
+      width: 100%; 
+      margin-bottom: 5px; 
+    }
+  
+    .dropdown select {
+      width: 100%; 
+    }
+  
+    .add-to-cart-btn {
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .options.show {
+      width:100%;
+    }
+  }
+  
+  /* For tablet-sized screens (medium devices) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .container {
+      max-width: 500px; 
+    }
+  
+    .unit-header {
+      flex-wrap: nowrap; 
+    }
+  
+    .unit-name, .discount-tag {
+      font-size: 14px; 
+    }
+  
+    .price {
+      font-size: 16px;
+    }
+  
+    .add-to-cart-btn {
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  /* For larger screens (desktops) */
+  @media (min-width: 769px) {
+    .container {
+      max-width: 480px; 
+      padding: 20px 60px;
+    }
+  
+    .unit-header {
+      justify-content: space-between; 
+    }
+  
+    .add-to-cart-btn {
+      font-size: 18px;
+      padding: 14px;
+    }
+  }
+  

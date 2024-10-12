@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOGO Offer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="head-container">
+      <div class="hr-line"></div>
+        <h1>YAY! It's BOGO</h1>
+      <div class="hr-line"></div>
+    </div>
+
+    <!-- 1 Unit Section -->
+    <div class="unit-box" onclick="toggleOptions(this)">
+      <div class="unit-header">
+        <div class="unit-data">
+            <input type="radio" name="unit" class="unit-radio" />
+                <span class="unit-name">1 Unit</span>
+                <span class="discount-tag">10% Off</span>
+        </div>
+        <div class="usd-price">
+            <span class="price">$10.00 USD</span>
+            <span class="original-price">$24.00 USD</span>
+        </div>
+      </div>
+      <!-- <div class="unit-subtext">Standard Price</div> -->
+      <div class="options">
+        <div></div>
+        <div>Size</div>
+        <div>Color</div>
+        <div>
+          <label>#1</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+        <div>
+          <label>#2</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <!-- <label>#2</label> -->
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 Unit Section with Most Popular Tag -->
+    <div class="unit-box most-popular" onclick="toggleOptions(this)">
+      <div class="unit-header">
+        <div class="unit-data">
+            <input type="radio" name="unit" class="unit-radio" />
+            <span class="unit-name">2 Unit</span>
+            <span class="discount-tag">20% Off</span>
+        </div>
+        <div class="usd-price">
+            <span class="price">$18.00 USD</span>
+            <span class="original-price">$24.00 USD</span>
+        </div>
+      </div>
+
+      <!-- Dropdowns for size and color -->
+      <div class="options">
+        <div></div>
+        <div>Size</div>
+        <div>Color</div>
+        <div>
+          <label>#1</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+        <div>
+          <label>#2</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <!-- <label>#2</label> -->
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Unit Section -->
+    <div class="unit-box" onclick="toggleOptions(this)">
+      <div class="unit-header">
+        <div class="unit-data">
+            <input type="radio" name="unit" class="unit-radio" />
+            <span class="unit-name">3 Unit</span>
+            <span class="discount-tag">30% Off</span>
+        </div>
+        <div class="usd-price">
+            <span class="price">$24.00 USD</span>
+            <span class="original-price">$24.00 USD</span>
+        </div>
+      </div>
+      <div class="options">
+        <div></div>
+        <div>Size</div>
+        <div>Color</div>
+        <div>
+          <label>#1</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+        <div>
+          <label>#2</label>
+        </div>
+        <div class="dropdown">
+          <select onclick="stopPropagation(event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <!-- <label>#2</label> -->
+          <select onclick="stopPropagation(event)">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section: Free Delivery and Total -->
+    <div class="footer">
+      <span class="free-delivery">Free Delivery</span>
+      <span class="total">Total: $18.00 USD</span>
+    </div>
+
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart-btn"> <span>+</span>Add to Cart</button>
+
+    <!-- Footer Credit -->
+    <div class="credit">
+      <span>@ Powered by Pumper</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
